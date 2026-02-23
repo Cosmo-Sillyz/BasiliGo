@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Quicksand', Arial, sans-serif;
-    background: linear-gradient(135deg, #b6c7a2 0%, #b6e0fe 100%);
+    background: linear-gradient(135deg, #b6e0fe 0%, #b6c7a2 100%);
     min-height: 100vh;
     overflow-x: hidden;
 }
@@ -16,7 +16,7 @@ header {
     z-index: 2;
     background: rgba(255,255,255,0.7);
     box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    padding: 1.5rem 0 1rem 0;
+    padding: 2rem 0 0.5rem 0;
     text-align: center;
 }
 .logo {
@@ -25,10 +25,19 @@ header {
     color: #4b6c4b;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0 0 0.5rem 0;
+    margin: 0;
     text-shadow: 0 2px 8px #e6e6e6;
 }
-nav ul {
+.slogan {
+    font-size: 1.3rem;
+    color: #6b7c6b;
+    margin: 0.5rem 0 1.5rem 0;
+    font-weight: 500;
+}
+.nav-bar {
+    margin-bottom: 1.5rem;
+}
+.nav-bar ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -36,7 +45,7 @@ nav ul {
     justify-content: center;
     gap: 2rem;
 }
-nav a {
+.nav-bar a {
     text-decoration: none;
     color: #3b5c6b;
     font-size: 1.2rem;
@@ -45,7 +54,7 @@ nav a {
     border-radius: 1em;
     transition: background 0.2s, color 0.2s;
 }
-nav a:hover {
+.nav-bar a:hover {
     background: #e6e6e6;
     color: #4b6c4b;
 }
@@ -87,6 +96,9 @@ nav a:hover {
 .star {
     pointer-events: none;
     transition: opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 /* Plantpotjes */
 .plant-pot {
@@ -101,13 +113,15 @@ nav a:hover {
     box-shadow: 0 6px 18px #b6c7a255;
     cursor: pointer;
     transition: transform 0.2s;
+    overflow: hidden;
 }
 .plant-pot .face {
     position: absolute;
     bottom: 18px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 2rem;
+    width: 40px;
+    height: 40px;
     pointer-events: none;
 }
 .plant-pot.shake {
