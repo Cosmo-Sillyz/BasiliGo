@@ -83,13 +83,11 @@ nav a:hover {
     z-index: 2;
     position: relative;
 }
-
 /* Sterretjes */
 .star {
     pointer-events: none;
     transition: opacity 0.5s;
 }
-
 /* Plantpotjes */
 .plant-pot {
     width: 80px;

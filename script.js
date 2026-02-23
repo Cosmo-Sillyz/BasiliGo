@@ -38,7 +38,7 @@ function addPlants() {
         const pot = document.createElement('div');
         pot.className = 'plant-pot';
         pot.style.background = pots[i % pots.length].color;
-        pot.innerHTML = `<span class="face">${pots[i % pots.length].face}</span>`;
+        pot.innerHTML = `<span class=\"face\">${pots[i % pots.length].face}</span>`;
         pot.addEventListener('click', () => {
             pot.classList.add('shake');
             setTimeout(() => pot.classList.remove('shake'), 600);
